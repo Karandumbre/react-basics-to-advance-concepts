@@ -1,68 +1,130 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Concepts and Components Repository
 
-## Available Scripts
+This repository contains examples of basic and advanced concepts of React, demonstrated through various components. Below is an overview of the components included in this project.
 
-In the project directory, you can run:
+## App.js
 
-### `npm start`
+```javascript
+import React, { Component } from "react";
+import "./App.css";
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+import {
+  ReactBasics,
+  Counter,
+  Icons,
+  Toast,
+  ReactModal,
+  ReactTooltip,
+  IdleTimer,
+  ErrorBoundary,
+  Form,
+  HOC,
+  LifecycleMounting,
+  LifecycleUpdating,
+  Parent,
+  Portal,
+  PureComponents,
+  Refs,
+  ForwardRef,
+  RenderProps,
+  InlineStyle,
+  StyleModule,
+  Stylesheet,
+} from "./Components";
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+class App extends Component {
+  render() {
+    return (
+      <div className="main">
+        <UserProvider value="Karan">
+          <ComponentC />
+        </UserProvider>
 
-### `npm test`
+        <ReactBasics.Greet name="Bruce" heroName="Batman">
+          <p>This is childtag</p>
+          <button>Action</button>
+        </ReactBasics.Greet>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        <ReactBasics.Greet name="Clark" heroName="Supername" />
 
-### `npm run build`
+        <ReactBasics.Welcome name="Bruce" heroName="Batman" />
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        <ReactBasics.Message />
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+        <ReactBasics.UserGreeting />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        <ReactBasics.Hello />
 
-### `npm run eject`
+        <ReactBasics.GreetDestructuring name="Bruce" heroName="Batman" />
+        <ReactBasics.GreetDestructuringAnother name="Bruce" heroName="Batman" />
+        <ReactBasics.FunctionClick />
+        <ReactBasics.ClassClick />
+        <ReactBasics.EventBind />
+        <ReactBasics.NameList />
+        <ReactBasics.FragmentDemo />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        <Counter />
+        <Parent />
+        <Stylesheet color="secondary" />
+        <InlineStyle />
+        <StyleModule />
+        <Form />
+        <LifecycleMounting />
+        <LifecycleUpdating />
+        <PureComponents />
+        <Refs />
+        <ForwardRef />
+        <Portal />
+        <ErrorBoundary />
+        <HOC />
+        <RenderProps />
+        <Icons />
+        <Toast />
+        <ReactModal />
+        <ReactTooltip />
+        <IdleTimer />
+      </div>
+    );
+  }
+}
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+export default App;
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ReactBasics: Demonstrates basic React concepts such as greeting components, destructuring props, event handling, and more.
+- Counter: A simple counter component to demonstrate state management.
+- Icons: Demonstrates the usage of icons in React.
+- Toast: Displays toast notifications.
+- ReactModal: Shows a modal component.
+- ReactTooltip: Demonstrates the usage of tooltips.
+- IdleTimer: A component that tracks user inactivity.
+- ErrorBoundary: Demonstrates error boundaries in React.
+- Form: Shows how to create and manage forms in React.
+- HOC: Demonstrates Higher Order Components.
+- LifecycleMounting: Demonstrates React component lifecycle methods during mounting.
+- LifecycleUpdating: Demonstrates React component lifecycle methods during updating.
+- Parent: A parent component to demonstrate component interaction.
+- Portal: Demonstrates the usage of React portals.
+- PureComponents: Demonstrates pure components in React.
+- Refs: Shows how to use refs in React.
+- ForwardRef: Demonstrates the usage of forward refs.
+- RenderProps: Demonstrates the render props pattern.
+- InlineStyle: Demonstrates how to apply inline styles in React.
+- StyleModule: Demonstrates the usage of CSS modules.
+- Stylesheet: Demonstrates the usage of stylesheets.
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Clone the repository and install the dependencies using npm install or yarn install. Then start the development server using npm start or yarn start.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### git clone [React basics to advance concepts](https://github.com/Karandumbre/react-basics-to-advance-concepts.git)
 
-### Code Splitting
+cd [React basics to advance concepts](https://github.com/Karandumbre/react-basics-to-advance-concepts.git)
+npm install
+npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Contributing
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Feel free to contribute to this repository by submitting pull requests. Please ensure that your code follows the coding standards and includes relevant tests.
